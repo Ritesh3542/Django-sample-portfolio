@@ -1,0 +1,23 @@
+<CENTER>
+{% load static %}
+<h1>RITESHKUMAR SINGH</H1>
+<br>
+<a href="{% static 'portfolio/1890-Playing It My Way_Sachin Tendulkar.pdf' %}" type="btn btn-primary">Resume</a>
+<br>
+<br>
+<a href="{% url 'blog:blog_home' %}">Blog</a>
+<br>
+<br>
+<img src="{% static 'portfolio/rupal bday.jpg' %}">
+<br>
+{% for p in projk %}
+<br>
+{{ p.title }}
+<br>
+{{ p.desc }}
+<br>
+<img src="{{ p.image.url }}">
+<br>
+
+{% endfor %}
+</CENTER>

@@ -1,0 +1,14 @@
+<center>
+<h2>MY BLOG HOMEPAGE</H2>
+<br>
+<h3>RITESHKUMAR HAS {{ blogk.count }} BLOG{{ blogk.count|pluralize }}</h3>
+<br>
+<div class="container">
+{% for b in blogk %}
+<a href="{% url 'blog:details' b.id %}"><h3>{{ b.blogtitle }}</h3></a>
+<h5>{{ b.blogdate|date:'d M Y'|upper }}</h5>
+<h5>{{ b.blogdesc|striptags|truncatechars:100 }}</h5>
+{% endfor %}
+<div>
+
+</center>
